@@ -29,40 +29,40 @@ body{
   padding:40px 20px 80px;
 }
 
-/* ---------- shared: upload slot ---------- */
-.upload-slot{
+/* ---------- shared: photo slot ---------- */
+/* กล่องรูปที่โหลดไฟล์จาก src ตรง ๆ (ต้องอัปโหลดไฟล์ .jpg เข้า repo ให้ชื่อตรงกับที่เขียนไว้ใน index.html) */
+.photo-slot{
   position:relative;
   display:block;
-  border:1.5px dashed rgba(43,38,32,.18);
   border-radius:16px;
   background:#F1ECE0;
-  cursor:pointer;
   overflow:hidden;
-  padding:0;
-  transition:border-color .2s ease, background .2s ease;
+  border:1px solid var(--line);
 }
 
-.upload-slot:hover{border-color:var(--amber);}
-.upload-slot:focus-visible{outline:2px solid var(--teal); outline-offset:2px;}
-
-.upload-slot .slot-img{
-  width:100%; height:100%;
+.photo-slot .photo{
+  width:100%;
+  height:100%;
   object-fit:cover;
-  display:none;
+  display:block;
 }
 
-.upload-slot.has-image .slot-img{display:block;}
-.upload-slot.has-image .slot-placeholder{display:none;}
-.upload-slot.has-image{border-style:solid; border-color:var(--line);}
-
-.slot-placeholder{
+.photo-fallback{
   position:absolute; inset:0;
-  display:flex; flex-direction:column; align-items:center; justify-content:center;
-  gap:6px;
+  display:none;
+  align-items:center; justify-content:center;
+  text-align:center;
+  padding:8px;
   color:var(--ink-soft);
-  font-size:.78rem;
-  font-weight:500;
+  font-size:.72rem;
+  font-weight:600;
+  border:1.5px dashed rgba(43,38,32,.2);
+  border-radius:16px;
 }
+
+/* ถ้ารูปโหลดไม่สำเร็จ (ยังไม่มีไฟล์ในโฟลเดอร์) จะซ่อนรูปแล้วโชว์ชื่อไฟล์ที่ต้องอัปโหลดแทน */
+.photo-slot.img-broken .photo{display:none;}
+.photo-slot.img-broken .photo-fallback{display:flex;}
 
 /* ---------- rank badge ---------- */
 .rank-badge{
@@ -99,7 +99,7 @@ body{
   flex-shrink:0;
 }
 
-.profile-card .avatar .slot-placeholder{font-size:.62rem; gap:4px;}
+.profile-card .avatar .photo-fallback{font-size:.62rem;}
 
 .badge-strip{
   font-family:var(--font-ui);
@@ -148,7 +148,7 @@ body{
   color:var(--ink);
 }
 
-/* ---------- ANIME GRID ---------- */
+/* ---------- MOVIE GRID ---------- */
 .anime-grid{
   display:grid;
   grid-template-columns:repeat(5, 1fr);
@@ -176,7 +176,6 @@ body{
 .anime-card .anime-cover{
   aspect-ratio:3/4;
   width:100%;
-  border-radius:12px;
   margin-bottom:10px;
 }
 
@@ -219,7 +218,6 @@ body{
 .song-cover{
   width:120px; height:80px;
   flex-shrink:0;
-  border-radius:12px;
 }
 
 .play-dot{
@@ -231,6 +229,7 @@ body{
   color:var(--paper);
   display:flex; align-items:center; justify-content:center;
   box-shadow:0 4px 10px rgba(240,102,90,.4);
+  z-index:2;
 }
 
 .song-info{flex:1; min-width:0;}
