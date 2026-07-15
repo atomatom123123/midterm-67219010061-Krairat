@@ -89,101 +89,69 @@
     </section>
 
     <!-- ===== SONGS SECTION ===== -->
-    <section class="block">
-      <div class="block-head">
-        <span class="block-icon">🎧</span>
-        <h2>เพลงที่ชอบ 5 เพลง</h2>
-      </div>
+    <section class="tracklist" id="songs">
+      <p class="section-eyebrow section-eyebrow--light">NOW PLAYING</p>
+      <h2 class="tracklist__title">เพลย์ลิสต์ 5 เพลงโปรด</h2>
+      <p class="tracklist__hint">คลิกที่เพลงเพื่อฟังบน YouTube ได้เลย</p>
 
-      <div class="songs-list">
-
-        <article class="song-card" data-yt="h_qjzGzsTqQ" tabindex="0" role="button" aria-label="เล่นเพลง จังหวะหัวใจ">
-          <div class="photo-slot song-cover">
-            <img class="photo" src="song1.jpg" alt="ปกเพลง จังหวะหัวใจ">
-            <span class="photo-fallback">song1.jpg</span>
-            <span class="play-dot"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
-          </div>
-          <div class="song-info">
-            <span class="rank-badge small">#1</span>
-            <p class="song-title">จังหวะหัวใจ</p>
-            <p class="song-artist">บี้ สุกฤษฎิ์</p>
-          </div>
-        </article>
-
-        <article class="song-card" data-yt="zW3LKXloies" tabindex="0" role="button" aria-label="เล่นเพลง ปวดใจ">
-          <div class="photo-slot song-cover">
-            <img class="photo" src="song2.jpg" alt="ปกเพลง ปวดใจ">
-            <span class="photo-fallback">song2.jpg</span>
-            <span class="play-dot"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
-          </div>
-          <div class="song-info">
-            <span class="rank-badge small">#2</span>
-            <p class="song-title">ปวดใจ</p>
-            <p class="song-artist">I-ZAX</p>
-          </div>
-        </article>
-
-        <article class="song-card" data-yt="W0p-DRznKrM" tabindex="0" role="button" aria-label="เล่นเพลง นางฟ้าจำแลง">
-          <div class="photo-slot song-cover">
-            <img class="photo" src="song3.jpg" alt="ปกเพลง นางฟ้าจำแลง">
-            <span class="photo-fallback">song3.jpg</span>
-            <span class="play-dot"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
-          </div>
-          <div class="song-info">
-            <span class="rank-badge small">#3</span>
-            <p class="song-title">นางฟ้าจำแลง</p>
-            <p class="song-artist">Cover by Natural Sense</p>
-          </div>
-        </article>
-
-        <article class="song-card" data-yt="BA9GuvSKYcQ" tabindex="0" role="button" aria-label="เล่นเพลง เพราะว่ารัก">
-          <div class="photo-slot song-cover">
-            <img class="photo" src="song4.jpg" alt="ปกเพลง เพราะว่ารัก">
-            <span class="photo-fallback">song4.jpg</span>
-            <span class="play-dot"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
-          </div>
-          <div class="song-info">
-            <span class="rank-badge small">#4</span>
-            <p class="song-title">เพราะว่ารัก</p>
-            <p class="song-artist">Retrospect</p>
-          </div>
-        </article>
-
-        <article class="song-card" data-yt="sliitz3PSHI" tabindex="0" role="button" aria-label="เล่นเพลง ไม่มีเธอ">
-          <div class="photo-slot song-cover">
-            <img class="photo" src="song5.jpg" alt="ปกเพลง ไม่มีเธอ">
-            <span class="photo-fallback">song5.jpg</span>
-            <span class="play-dot"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
-          </div>
-          <div class="song-info">
-            <span class="rank-badge small">#5</span>
-            <p class="song-title">ไม่มีเธอ</p>
-            <p class="song-artist">Retrospect</p>
-          </div>
-        </article>
-
-      </div>
+      <ol class="tracks">
+        <li class="track">
+          <a class="track__link" href="https://www.youtube.com/watch?v=h_qjzGzsTqQ" target="_blank" rel="noopener noreferrer">
+            <span class="track__num">01</span>
+            <img class="track__cover" src="https://img.youtube.com/vi/h_qjzGzsTqQ/hqdefault.jpg" alt="ปกเพลง จังหวะหัวใจ - บี้ สุกฤษฎิ์" loading="lazy">
+            <span class="track__info">
+              <span class="track__title">จังหวะหัวใจ</span>
+              <span class="track__artist">บี้ สุกฤษฎิ์</span>
+            </span>
+            <span class="track__cta">ฟังบน YouTube ↗</span>
+          </a>
+        </li>
+        <li class="track">
+          <a class="track__link" href="https://www.youtube.com/watch?v=zW3LKXloies" target="_blank" rel="noopener noreferrer">
+            <span class="track__num">02</span>
+            <img class="track__cover" src="https://img.youtube.com/vi/zW3LKXloies/hqdefault.jpg" alt="ปกเพลง ปวดใจ - I-ZAX" loading="lazy">
+            <span class="track__info">
+              <span class="track__title">ปวดใจ</span>
+              <span class="track__artist">I-ZAX</span>
+            </span>
+            <span class="track__cta">ฟังบน YouTube ↗</span>
+          </a>
+        </li>
+        <li class="track">
+          <a class="track__link" href="https://www.youtube.com/watch?v=W0p-DRznKrM" target="_blank" rel="noopener noreferrer">
+            <span class="track__num">03</span>
+            <img class="track__cover" src="https://img.youtube.com/vi/W0p-DRznKrM/hqdefault.jpg" alt="ปกเพลง นางฟ้าจำแลง - Cover by Natural Sense" loading="lazy">
+            <span class="track__info">
+              <span class="track__title">นางฟ้าจำแลง</span>
+              <span class="track__artist">Cover by Natural Sense</span>
+            </span>
+            <span class="track__cta">ฟังบน YouTube ↗</span>
+          </a>
+        </li>
+        <li class="track">
+          <a class="track__link" href="https://www.youtube.com/watch?v=BA9GuvSKYcQ" target="_blank" rel="noopener noreferrer">
+            <span class="track__num">04</span>
+            <img class="track__cover" src="https://img.youtube.com/vi/BA9GuvSKYcQ/hqdefault.jpg" alt="ปกเพลง เพราะว่ารัก - Retrospect" loading="lazy">
+            <span class="track__info">
+              <span class="track__title">เพราะว่ารัก</span>
+              <span class="track__artist">Retrospect</span>
+            </span>
+            <span class="track__cta">ฟังบน YouTube ↗</span>
+          </a>
+        </li>
+        <li class="track">
+          <a class="track__link" href="https://www.youtube.com/watch?v=sliitz3PSHI" target="_blank" rel="noopener noreferrer">
+            <span class="track__num">05</span>
+            <img class="track__cover" src="https://img.youtube.com/vi/sliitz3PSHI/hqdefault.jpg" alt="ปกเพลง ไม่มีเธอ - Retrospect" loading="lazy">
+            <span class="track__info">
+              <span class="track__title">ไม่มีเธอ</span>
+              <span class="track__artist">Retrospect</span>
+            </span>
+            <span class="track__cta">ฟังบน YouTube ↗</span>
+          </a>
+        </li>
+      </ol>
     </section>
-
-    <!-- ===== VIDEO PLAYER MODAL ===== -->
-    <div class="player-overlay" id="playerOverlay">
-      <div class="player-box">
-        <button class="player-close" id="playerClose" aria-label="ปิด">&times;</button>
-        <div class="player-frame">
-          <iframe id="playerIframe"
-            src=""
-            title="YouTube player"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen>
-          </iframe>
-        </div>
-        <div class="player-meta">
-          <p class="player-title" id="playerTitle"></p>
-          <p class="player-artist" id="playerArtist"></p>
-        </div>
-      </div>
-    </div>
 
   </main>
 
