@@ -97,73 +97,94 @@
 
       <div class="songs-list">
 
-        <article class="song-card">
+        <article class="song-card" data-yt="h_qjzGzsTqQ" tabindex="0" role="button" aria-label="เล่นเพลง จังหวะหัวใจ">
           <div class="photo-slot song-cover">
-            <img class="photo" src="song1.jpg" alt="ปกเพลงที่ 1">
+            <img class="photo" src="song1.jpg" alt="ปกเพลง จังหวะหัวใจ">
             <span class="photo-fallback">song1.jpg</span>
             <span class="play-dot"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
           </div>
           <div class="song-info">
             <span class="rank-badge small">#1</span>
-            <p class="song-title">ชื่อเพลงที่ 1</p>
-            <p class="song-artist">ชื่อศิลปิน</p>
+            <p class="song-title">จังหวะหัวใจ</p>
+            <p class="song-artist">บี้ สุกฤษฎิ์</p>
           </div>
         </article>
 
-        <article class="song-card">
+        <article class="song-card" data-yt="zW3LKXloies" tabindex="0" role="button" aria-label="เล่นเพลง ปวดใจ">
           <div class="photo-slot song-cover">
-            <img class="photo" src="song2.jpg" alt="ปกเพลงที่ 2">
+            <img class="photo" src="song2.jpg" alt="ปกเพลง ปวดใจ">
             <span class="photo-fallback">song2.jpg</span>
             <span class="play-dot"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
           </div>
           <div class="song-info">
             <span class="rank-badge small">#2</span>
-            <p class="song-title">ชื่อเพลงที่ 2</p>
-            <p class="song-artist">ชื่อศิลปิน</p>
+            <p class="song-title">ปวดใจ</p>
+            <p class="song-artist">I-ZAX</p>
           </div>
         </article>
 
-        <article class="song-card">
+        <article class="song-card" data-yt="W0p-DRznKrM" tabindex="0" role="button" aria-label="เล่นเพลง นางฟ้าจำแลง">
           <div class="photo-slot song-cover">
-            <img class="photo" src="song3.jpg" alt="ปกเพลงที่ 3">
+            <img class="photo" src="song3.jpg" alt="ปกเพลง นางฟ้าจำแลง">
             <span class="photo-fallback">song3.jpg</span>
             <span class="play-dot"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
           </div>
           <div class="song-info">
             <span class="rank-badge small">#3</span>
-            <p class="song-title">ชื่อเพลงที่ 3</p>
-            <p class="song-artist">ชื่อศิลปิน</p>
+            <p class="song-title">นางฟ้าจำแลง</p>
+            <p class="song-artist">Cover by Natural Sense</p>
           </div>
         </article>
 
-        <article class="song-card">
+        <article class="song-card" data-yt="BA9GuvSKYcQ" tabindex="0" role="button" aria-label="เล่นเพลง เพราะว่ารัก">
           <div class="photo-slot song-cover">
-            <img class="photo" src="song4.jpg" alt="ปกเพลงที่ 4">
+            <img class="photo" src="song4.jpg" alt="ปกเพลง เพราะว่ารัก">
             <span class="photo-fallback">song4.jpg</span>
             <span class="play-dot"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
           </div>
           <div class="song-info">
             <span class="rank-badge small">#4</span>
-            <p class="song-title">ชื่อเพลงที่ 4</p>
-            <p class="song-artist">ชื่อศิลปิน</p>
+            <p class="song-title">เพราะว่ารัก</p>
+            <p class="song-artist">Retrospect</p>
           </div>
         </article>
 
-        <article class="song-card">
+        <article class="song-card" data-yt="sliitz3PSHI" tabindex="0" role="button" aria-label="เล่นเพลง ไม่มีเธอ">
           <div class="photo-slot song-cover">
-            <img class="photo" src="song5.jpg" alt="ปกเพลงที่ 5">
+            <img class="photo" src="song5.jpg" alt="ปกเพลง ไม่มีเธอ">
             <span class="photo-fallback">song5.jpg</span>
             <span class="play-dot"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
           </div>
           <div class="song-info">
             <span class="rank-badge small">#5</span>
-            <p class="song-title">ชื่อเพลงที่ 5</p>
-            <p class="song-artist">ชื่อศิลปิน</p>
+            <p class="song-title">ไม่มีเธอ</p>
+            <p class="song-artist">Retrospect</p>
           </div>
         </article>
 
       </div>
     </section>
+
+    <!-- ===== VIDEO PLAYER MODAL ===== -->
+    <div class="player-overlay" id="playerOverlay">
+      <div class="player-box">
+        <button class="player-close" id="playerClose" aria-label="ปิด">&times;</button>
+        <div class="player-frame">
+          <iframe id="playerIframe"
+            src=""
+            title="YouTube player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+          </iframe>
+        </div>
+        <div class="player-meta">
+          <p class="player-title" id="playerTitle"></p>
+          <p class="player-artist" id="playerArtist"></p>
+        </div>
+      </div>
+    </div>
+
   </main>
 
 <script src="script.js"></script>
