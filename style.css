@@ -31,6 +31,8 @@ body{
 
 /* ---------- shared: photo slot ---------- */
 /* กล่องรูปที่โหลดไฟล์จาก src ตรง ๆ (ต้องอัปโหลดไฟล์ .jpg เข้า repo ให้ชื่อตรงกับที่เขียนไว้ใน index.html) */
+/* สำคัญ: .photo ถูกปักตำแหน่งแบบ absolute เต็มกรอบเสมอ ไม่ว่ารูปต้นฉบับจะสัดส่วนหรือขนาดใหญ่แค่ไหน
+   ก็ไม่มีทางดันเลย์เอาต์ให้เพี้ยนหรือล้นกรอบได้อีก */
 .photo-slot{
   position:relative;
   display:block;
@@ -38,13 +40,23 @@ body{
   background:#F1ECE0;
   overflow:hidden;
   border:1px solid var(--line);
+  isolation:isolate;
 }
 
 .photo-slot .photo{
+  position:absolute;
+  inset:0;
   width:100%;
   height:100%;
   object-fit:cover;
+  object-position:center 18%;
   display:block;
+  transition:transform .4s ease;
+}
+
+.anime-card:hover .photo-slot .photo,
+.song-card:hover .photo-slot .photo{
+  transform:scale(1.05);
 }
 
 .photo-fallback{
@@ -56,8 +68,10 @@ body{
   color:var(--ink-soft);
   font-size:.72rem;
   font-weight:600;
+  background:#F1ECE0;
   border:1.5px dashed rgba(43,38,32,.2);
   border-radius:16px;
+  z-index:1;
 }
 
 /* ถ้ารูปโหลดไม่สำเร็จ (ยังไม่มีไฟล์ในโฟลเดอร์) จะซ่อนรูปแล้วโชว์ชื่อไฟล์ที่ต้องอัปโหลดแทน */
@@ -94,12 +108,14 @@ body{
 }
 
 .profile-card .avatar{
-  width:96px; height:96px;
-  border-radius:20px;
+  width:104px; height:104px;
+  border-radius:50%;
   flex-shrink:0;
+  border:3px solid var(--paper);
+  box-shadow:0 0 0 3px var(--amber);
 }
 
-.profile-card .avatar .photo-fallback{font-size:.62rem;}
+.profile-card .avatar .photo-fallback{font-size:.6rem; border-radius:50%;}
 
 .badge-strip{
   font-family:var(--font-ui);
@@ -162,21 +178,26 @@ body{
   padding:10px;
   border:1px solid var(--line);
   box-shadow:var(--shadow);
-  transition:transform .2s ease;
+  transition:transform .25s ease, box-shadow .25s ease;
 }
 
-.anime-card:hover{transform:translateY(-4px);}
+.anime-card:hover{
+  transform:translateY(-6px);
+  box-shadow:0 20px 40px rgba(43,38,32,.16);
+}
 
 .anime-card .rank-badge{
   position:absolute;
   top:20px; left:20px;
   z-index:2;
+  box-shadow:0 4px 10px rgba(0,0,0,.35);
 }
 
 .anime-card .anime-cover{
   aspect-ratio:3/4;
   width:100%;
   margin-bottom:10px;
+  box-shadow:inset 0 0 0 1px rgba(0,0,0,.04);
 }
 
 .anime-title{
