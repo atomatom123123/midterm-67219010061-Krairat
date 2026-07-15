@@ -15,14 +15,10 @@
 
     <!-- ===== PROFILE CARD ===== -->
     <section class="profile-card">
-      <button class="upload-slot avatar" data-key="avatar" type="button" aria-label="">
-        <img src="profile.jpg" alt="">
-        <span class="slot-placeholder">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-          <span>รูปโปรไฟล์</span>
-        </span>
-        <input class="slot-input" type="file" accept="image/*" hidden>
-      </button>
+      <div class="photo-slot avatar">
+        <img class="photo" src="profile.jpg" alt="รูปโปรไฟล์ของไกรรัช">
+        <span class="photo-fallback">profile.jpg</span>
+      </div>
 
       <div class="profile-info">
         <h1 class="profile-name">ไกรรัช ท้าวแก้ว</h1>
@@ -30,68 +26,63 @@
       </div>
     </section>
 
-    <!-- ===== ANIME SECTION ===== -->
+    <!-- ===== MOVIES SECTION ===== -->
     <section class="block">
       <div class="block-head">
         <span class="block-icon">🎬</span>
-        <h2>หนังที่ชอบ</h2>
+        <h2>หนังที่ชอบ 5 เรื่อง</h2>
       </div>
 
       <div class="anime-grid">
 
         <article class="anime-card">
           <span class="rank-badge">#1</span>
-          <button class="upload-slot anime-cover" data-key="anime-1" type="button" aria-label="">
-            <img class="slot-img" alt="">
-            <span class="slot-placeholder"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg><span>ใส่รูป</span></span>
-            <input class="slot-input" type="file" accept="image/*" hidden>
-          </button>
-          <p class="anime-title">ชื่อเรื่องที่ 1</p>
-          <p class="anime-sub">หมายเหตุสั้น ๆ</p>
+          <div class="photo-slot anime-cover">
+            <img class="photo" src="Deadpool.jpg" alt="Deadpool">
+            <span class="photo-fallback">Deadpool.jpg</span>
+          </div>
+          <p class="anime-title">Deadpool</p>
+          <p class="anime-sub">หนังแอคชั่นคอมเมดี้</p>
         </article>
 
         <article class="anime-card">
           <span class="rank-badge">#2</span>
-          <button class="upload-slot anime-cover" data-key="anime-2" type="button" aria-label="">
-            <img class="slot-img" alt="">
-            <span class="slot-placeholder"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg><span>ใส่รูป</span></span>
-            <input class="slot-input" type="file" accept="image/*" hidden>
-          </button>
-          <p class="anime-title">ชื่อเรื่องที่ 2</p>
-          <p class="anime-sub">หมายเหตุสั้น ๆ</p>
+          <div class="photo-slot anime-cover">
+            <img class="photo" src="Realsteel.jpg" alt="Real Steel">
+            <span class="photo-fallback">Realsteel.jpg</span>
+          </div>
+          <p class="anime-title">Real Steel</p>
+          <p class="anime-sub">หุ่นยนต์นักชก</p>
         </article>
 
         <article class="anime-card">
           <span class="rank-badge">#3</span>
-          <button class="upload-slot anime-cover" data-key="anime-3" type="button" aria-label="">
-            <img class="slot-img" alt="">
-            <span class="slot-placeholder"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg><span>ใส่รูป</span></span>
-            <input class="slot-input" type="file" accept="image/*" hidden>
-          </button>
-          <p class="anime-title">ชื่อเรื่องที่ 3</p>
-          <p class="anime-sub">หมายเหตุสั้น ๆ</p>
+          <div class="photo-slot anime-cover">
+            <img class="photo" src="Spiderman.jpg" alt="Spider-Man">
+            <span class="photo-fallback">Spiderman.jpg</span>
+          </div>
+          <p class="anime-title">Spider-Man</p>
+          <p class="anime-sub">ซูเปอร์ฮีโร่สุดคลาสสิก</p>
         </article>
 
         <article class="anime-card">
           <span class="rank-badge">#4</span>
-          <button class="upload-slot anime-cover" data-key="anime-4" type="button" aria-label="">
-            <img class="slot-img" alt="">
-            <span class="slot-placeholder"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg><span>ใส่รูป</span></span>
-            <input class="slot-input" type="file" accept="image/*" hidden>
-          </button>
-          <p class="anime-title">ชื่อเรื่องที่ 4</p>
-          <p class="anime-sub">หมายเหตุสั้น ๆ</p>
+          <div class="photo-slot anime-cover">
+            <img class="photo" src="TokyoDrift.jpg" alt="Tokyo Drift">
+            <span class="photo-fallback">TokyoDrift.jpg</span>
+          </div>
+          <p class="anime-title">Tokyo Drift</p>
+          <p class="anime-sub">เร็ว...แรงทะลุนรก</p>
         </article>
 
         <article class="anime-card">
           <span class="rank-badge">#5</span>
-          <button class="upload-slot anime-cover" data-key="anime-5" type="button" aria-label="">
-            <img class="slot-img" alt="">
-            <span class="slot-placeholder"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg><span>ใส่รูป</span></span>
-            <input class="slot-input" type="file" accept="image/*" hidden>
-          </button>
-          <p class="anime-title">ชื่อเรื่องที่ 5</p>
-          <p class="anime-sub">หมายเหตุสั้น ๆ</p>
+          <div class="photo-slot anime-cover">
+            <img class="photo" src="pacificrim.jpg" alt="Pacific Rim">
+            <span class="photo-fallback">pacificrim.jpg</span>
+          </div>
+          <p class="anime-title">Pacific Rim</p>
+          <p class="anime-sub">หุ่นยักษ์กู้โลก</p>
         </article>
 
       </div>
@@ -107,12 +98,11 @@
       <div class="songs-list">
 
         <article class="song-card">
-          <button class="upload-slot song-cover" data-key="song-1" type="button" aria-label="">
-            <img class="slot-img" alt="">
-            <span class="slot-placeholder"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg><span>ใส่รูป</span></span>
-            <input class="slot-input" type="file" accept="image/*" hidden>
+          <div class="photo-slot song-cover">
+            <img class="photo" src="song1.jpg" alt="ปกเพลงที่ 1">
+            <span class="photo-fallback">song1.jpg</span>
             <span class="play-dot"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
-          </button>
+          </div>
           <div class="song-info">
             <span class="rank-badge small">#1</span>
             <p class="song-title">ชื่อเพลงที่ 1</p>
@@ -121,12 +111,11 @@
         </article>
 
         <article class="song-card">
-          <button class="upload-slot song-cover" data-key="song-2" type="button" aria-label="">
-            <img class="slot-img" alt="">
-            <span class="slot-placeholder"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg><span>ใส่รูป</span></span>
-            <input class="slot-input" type="file" accept="image/*" hidden>
+          <div class="photo-slot song-cover">
+            <img class="photo" src="song2.jpg" alt="ปกเพลงที่ 2">
+            <span class="photo-fallback">song2.jpg</span>
             <span class="play-dot"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
-          </button>
+          </div>
           <div class="song-info">
             <span class="rank-badge small">#2</span>
             <p class="song-title">ชื่อเพลงที่ 2</p>
@@ -135,12 +124,11 @@
         </article>
 
         <article class="song-card">
-          <button class="upload-slot song-cover" data-key="song-3" type="button" aria-label="">
-            <img class="slot-img" alt="">
-            <span class="slot-placeholder"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg><span>ใส่รูป</span></span>
-            <input class="slot-input" type="file" accept="image/*" hidden>
+          <div class="photo-slot song-cover">
+            <img class="photo" src="song3.jpg" alt="ปกเพลงที่ 3">
+            <span class="photo-fallback">song3.jpg</span>
             <span class="play-dot"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
-          </button>
+          </div>
           <div class="song-info">
             <span class="rank-badge small">#3</span>
             <p class="song-title">ชื่อเพลงที่ 3</p>
@@ -149,12 +137,11 @@
         </article>
 
         <article class="song-card">
-          <button class="upload-slot song-cover" data-key="song-4" type="button" aria-label="">
-            <img class="slot-img" alt="">
-            <span class="slot-placeholder"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg><span>ใส่รูป</span></span>
-            <input class="slot-input" type="file" accept="image/*" hidden>
+          <div class="photo-slot song-cover">
+            <img class="photo" src="song4.jpg" alt="ปกเพลงที่ 4">
+            <span class="photo-fallback">song4.jpg</span>
             <span class="play-dot"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
-          </button>
+          </div>
           <div class="song-info">
             <span class="rank-badge small">#4</span>
             <p class="song-title">ชื่อเพลงที่ 4</p>
@@ -163,12 +150,11 @@
         </article>
 
         <article class="song-card">
-          <button class="upload-slot song-cover" data-key="song-5" type="button" aria-label="">
-            <img class="slot-img" alt="">
-            <span class="slot-placeholder"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg><span>ใส่รูป</span></span>
-            <input class="slot-input" type="file" accept="image/*" hidden>
+          <div class="photo-slot song-cover">
+            <img class="photo" src="song5.jpg" alt="ปกเพลงที่ 5">
+            <span class="photo-fallback">song5.jpg</span>
             <span class="play-dot"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
-          </button>
+          </div>
           <div class="song-info">
             <span class="rank-badge small">#5</span>
             <p class="song-title">ชื่อเพลงที่ 5</p>
