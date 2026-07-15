@@ -12,3 +12,58 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 });
+
+// ===== เล่นเพลงในหน้าเว็บ (ไม่เด้งไป YouTube) =====
+document.addEventListener('DOMContentLoaded', () => {
+  const overlay = document.getElementById('playerOverlay');
+  const iframe = document.getElementById('playerIframe');
+  const closeBtn = document.getElementById('playerClose');
+  const titleEl = document.getElementById('playerTitle');
+  const artistEl = document.getElementById('playerArtist');
+  const trackLinks = document.querySelectorAll('.track__link[data-video-id]');
+
+  if (!overlay || !iframe || !closeBtn) return;
+
+  function openPlayer(link) {
+    const videoId = link.getAttribute('data-video-id');
+    if (!videoId) return;
+
+    const title = link.querySelector('.track__title')?.textContent || '';
+    const artist = link.querySelector('.track__artist')?.textContent || '';
+
+    iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0`;
+    titleEl.textContent = title;
+    artistEl.textContent = artist;
+
+    overlay.classList.add('active');
+    document.body.style.overflow = 'hidden';
+    closeBtn.focus();
+  }
+
+  function closePlayer() {
+    overlay.classList.remove('active');
+    iframe.src = ''; // หยุดวิดีโอทันทีเมื่อปิด
+    document.body.style.overflow = '';
+  }
+
+  trackLinks.forEach(link => {
+    link.addEventListener('click', (e) => {
+      e.preventDefault(); // กันไม่ให้เด้งไปหน้า YouTube
+      openPlayer(link);
+    });
+  });
+
+  closeBtn.addEventListener('click', closePlayer);
+
+  // ปิดเมื่อคลิกพื้นหลังนอกกล่อง
+  overlay.addEventListener('click', (e) => {
+    if (e.target === overlay) closePlayer();
+  });
+
+  // ปิดด้วยปุ่ม Esc
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && overlay.classList.contains('active')) {
+      closePlayer();
+    }
+  });
+});
